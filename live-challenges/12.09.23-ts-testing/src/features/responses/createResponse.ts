@@ -1,3 +1,4 @@
+import { map, string } from "zod"
 import { CreateResponses, Faker } from "./types"
 
 const fakeAnswers: string[] = [
@@ -21,10 +22,10 @@ const getRandomId = () => {
 
 // TODO: Oppgave 1 - Not implemented
 const faker: Faker = {
-  id,
-  answer,
-  score,
-  category,
+  id: getRandomId,
+  answer: getRandomItem(fakeAnswers),
+  score: getRandomItem(fakeScores),
+  category: getRandomItem(fakeCategories),
 }
 
 // TODO: Oppgave 1 - Not implemented
